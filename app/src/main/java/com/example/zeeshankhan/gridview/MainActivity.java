@@ -39,22 +39,21 @@ public class MainActivity extends AppCompatActivity {
 
         androidGridView=(GridView)findViewById(R.id.grid_view_image_text);
 //        androidGridView.setAdapter(adapterViewAndroid);
-
         androidGridView.post(new Runnable(){
             public void run(){
                 int height = androidGridView.getHeight()/3;
-                final CustomGridViewActivity adapterViewAndroid = new CustomGridViewActivity(MainActivity.this, gridViewString, gridViewImageId,height);
+                final CustomGridAdapter adapterViewAndroid = new CustomGridAdapter(MainActivity.this, gridViewString, gridViewImageId,height);
                 androidGridView.setAdapter(adapterViewAndroid);
             }
         });
 
-        androidGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*androidGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int i, long id) {
                 Toast.makeText(MainActivity.this, "GridView Item: " + gridViewString[+i], Toast.LENGTH_LONG).show();
             }
-        });
+        });*/
 
     }
 }
