@@ -45,6 +45,12 @@
         android:weightSum="10"
         android:layout_below="@+id/rlSelectionMode">
 
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5" >
+        </View>
+
         <GridView
             android:layout_weight="9"
             android:id="@+id/grid_view_image_text"
@@ -52,15 +58,15 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:numColumns="3"
-            android:verticalSpacing="2dp"
-            android:horizontalSpacing="2dp"
+            android:verticalSpacing="0dp"
+            android:horizontalSpacing="0dp"
             android:scrollbars="none"
             android:listSelector="@android:color/transparent"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" >
+            android:layout_weight=".5" >
         </View>
     </LinearLayout>
 
